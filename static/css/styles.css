@@ -63,6 +63,22 @@ h1{
   margin-block-start: 0;
 }
 
+h2{
+  font-family: 'RedHatDisplay', sans-serif;
+  font-size: 2rem;
+  font-weight: bold;
+  letter-spacing: -0.32px;
+  margin-block-start: 0;
+}
+
+h3{
+  font-family: 'RedHatDisplay', sans-serif;
+  font-size: 1.32rem;
+  font-weight: 500;
+  letter-spacing: -0.32px;
+  margin-block-start: 0;
+}
+
 html{
   overflow-x: none;
   scroll-behavior: smooth;
@@ -79,6 +95,28 @@ p {
 
 section {
   position: relative;
+}
+
+.card{
+  background-color: var(--tertiary);
+  padding: 1.5rem 1rem;
+  display: flex;
+  gap: 1rem;
+}
+.card p{
+  font-weight: 500;
+  font-size: 1.32rem;
+  opacity: 1;
+  margin-block-start: 0;
+  margin-block-end: 0;
+}
+
+.hero--icons{
+  margin-bottom: 3rem;
+  padding: 1rem 0.94rem;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
 }
 
 .hero--img{
@@ -118,6 +156,32 @@ section {
   position: absolute;
   bottom: 1.5rem;
   right: 0.94rem;
+}
+
+.hp{
+  background-image: url(/images/bg.jpg);
+  background-size: cover;
+  padding: 3rem 0.94rem 0;
+}
+.hp--img{
+  position: relative;
+  top: 4rem;
+}
+.hp--text{
+  margin-bottom: -3rem;
+}
+.hp--text h3, .hp--text h2, .hp--text p{
+  color: var(--secondary);
+  opacity: 1;
+}
+.hp--text p::before{
+  content: url(/images/Icons_Marker.svg);
+  position: absolute;
+  left: -2rem;
+}
+.hp--text p{
+  margin-left: 2rem;
+  position: relative;
 }
 
 .logo{
@@ -167,6 +231,12 @@ section {
   left: 0;
   top: 0;
   transition: 0.3s;
+  z-index: 10;
+}
+
+.products{
+  margin-top: 6rem;
+  padding: 2rem 0.94rem 1rem;
 }
 
 
