@@ -79,6 +79,12 @@ h3{
   margin-block-start: 0;
 }
 
+hr{
+  background-color: var(--primary);
+  height: 2px;
+  margin-top: 3rem;
+}
+
 html{
   overflow-x: none;
   scroll-behavior: smooth;
@@ -97,6 +103,16 @@ section {
   position: relative;
 }
 
+.about-us{
+  padding: 3rem 0.94rem;
+}
+
+.address{
+  font-size: 1.75rem;
+  line-height: 1.5;
+  letter-spacing: 0.56px;
+}
+
 .card{
   background-color: var(--tertiary);
   padding: 1.5rem 1rem;
@@ -109,6 +125,82 @@ section {
   opacity: 1;
   margin-block-start: 0;
   margin-block-end: 0;
+}
+.delivery{
+  font-size: 1.125rem;
+  margin-bottom: 2rem;
+}
+.details a{
+  text-align: center;
+  text-decoration: none;
+  color: var(--primary);
+  opacity: 0.4;
+  margin: 0.1rem auto;
+  display: block;
+}
+
+.foo-address::before{
+  content: url(/images/Icons_Address.svg);
+  position: absolute;
+  top: 0.3rem;
+  left: 0.5rem;
+}
+.foo-phone::before{
+  content: url(/images/Icons_Phone.svg);
+  position: absolute;
+  left: 0.5rem;
+}
+
+.footer--contacts a{
+  font-size: 1rem;
+  font-weight: bold;
+  color: var(--primary);
+  text-decoration: none;
+  margin-top: 1.2rem;
+  display: block;
+  margin: 1.5rem auto;
+  max-width: 11rem;
+  position: relative;
+  padding-left: 3rem;
+}
+.footer--contacts a:hover{
+  opacity: 0.5;
+}
+
+.footer--links{
+  display: flex;
+  flex-direction: column;
+}
+
+.footer--links a{
+  font-size: 1rem;
+  font-weight: bold;
+  color: var(--primary);
+  text-decoration: none;
+  text-align: center;
+  margin-top: 1.2rem;
+}
+.footer--links a:hover{
+  opacity: 0.5;
+}
+
+.footer--logo{
+  margin: auto;
+  max-width: fit-content;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.footer--logo a{
+  max-width: fit-content;
+  margin: auto;
+}
+
+.footer-rule{
+  max-width: 38%;
+  height: 1px;
+  background-color: var(--primary);
+  opacity: 0.4;
 }
 
 .hero--icons{
@@ -129,14 +221,14 @@ section {
    flex-direction: column;
    padding: 1.2rem 0.94rem;
 }
-.hero--links a{
+.main--link{
   font-size: 2rem;
   font-weight: bold;
   color: var(--primary);
   margin: 0.8rem 0;
   display: block;
 }
-.hero--links a::after{
+.main--link::after{
   content: url(/images/Icons_Arrow-link.svg);
   position: absolute;
  margin-left: 0.75rem;
@@ -182,6 +274,10 @@ section {
 .hp--text p{
   margin-left: 2rem;
   position: relative;
+}
+
+.location{
+  padding: 3rem 0.94rem;
 }
 
 .logo{
@@ -232,6 +328,37 @@ section {
   top: 0;
   transition: 0.3s;
   z-index: 10;
+}
+
+.parallax{
+  height: auto;
+  background-position: 50% 50%;
+  background-attachment: fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.phone{
+  font-size: 2rem;
+  font-weight: bold;
+  text-decoration: none;
+  color: var(--primary);
+  display: block;
+  margin-top: 1rem;
+}
+
+.product{
+  margin-top: 2rem;
+}
+
+.product p{
+  color: var(--primary);
+  opacity: 1;
+}
+
+.product img{
+  width: 100%;
 }
 
 .products{
