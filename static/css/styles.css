@@ -337,7 +337,7 @@ section {
   text-align: center;
   font-size: 1.69rem;
   text-decoration: none;
-  font-family: 'plus-Jakarta-Sans', sans-serif;
+  font-family: 'RedHatDisplay', sans-serif;
   font-weight: bold;
   color: var(--tertiary);
   margin: 1rem 0;
@@ -394,6 +394,38 @@ section {
   color: var(--primary);
   display: block;
   margin-top: 1rem;
+}
+
+.price{
+  font-size: 1.75rem;
+  font-weight: bold;
+  color: var(--secondary);
+  opacity: 1;
+  letter-spacing: -0.27px;
+}
+
+.pricing{
+  background-color: var(--primary);
+  padding: 2.5rem 0.94rem;
+}
+.pricing h2, .pricing label, .pricing select, .pricing option, .pricing p{
+  color: var(--secondary);
+  display: block;
+  background-color: var(--primary);
+}
+.pricing option{
+  background-color: var(--primary);
+  display: block;
+  font-weight: bold;
+
+}
+.pricing select{
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  font-family: 'RedHatDisplay', sans-serif;
+  font-weight: bold;
+  padding: 2rem 0 0.75rem;
 }
 
 .product{
