@@ -1,19 +1,18 @@
 
-
 {
-  "classic":{
-    "oval":{
-      "8x12"{
-        {
-          "price": "3469.00",
-          "double": "4623.00",
-          "sealed": "324.00",
-          "screened": "974.00"
-        }
-      }
+    "classic": {
+        "octagon": [
+            {"size": "8x12",
+             "price":3469,
+             "double": 4623,
+             "sealed": 324,
+             "screened": 974},
+            {"size":"10x12",
+             "price":3869}
+        ],
+        "oval": {"id":2,"company":"ACME"}
     },
-    "octagon":
-
-    }
-  }
+    "economy": {
+        "thing": [[1,42],[2,2]]
+     }
 }
