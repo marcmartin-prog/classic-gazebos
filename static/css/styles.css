@@ -2,7 +2,7 @@
   --primary: #273043;
   --secondary: #ffffff;
   --tertiary: #34f6f2;
-  --quaternary: ;
+  --quaternary: #bdb3b4;
   --quinary: ;
 }
 
@@ -126,6 +126,21 @@ section {
   margin-block-start: 0;
   margin-block-end: 0;
 }
+
+.card--gaz{
+  background-color: var(--quaternary);
+  display: flex;
+  gap: 1rem;
+  padding: 1.5rem 1rem;
+  align-items: flex-start;
+}
+.card--gaz p{
+  opacity: 1;
+}
+.card--gaz h3{
+  margin-top: 0.5rem;
+}
+
 .delivery{
   font-size: 1.125rem;
   margin-bottom: 2rem;
@@ -234,6 +249,12 @@ section {
  margin-left: 0.75rem;
 }
 
+.hero--buttons{
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
 .hero--text{
   background-color: var(--primary);
   padding: 2.5rem 0.94rem;
@@ -274,6 +295,10 @@ section {
 .hp--text p{
   margin-left: 2rem;
   position: relative;
+}
+
+.light-text{
+  opacity: 0.4;
 }
 
 .location{
@@ -330,6 +355,29 @@ section {
   z-index: 10;
 }
 
+.option{
+  margin: 2.5rem 0;
+}
+
+.option img{
+  max-width: 100%;
+}
+.option h3{
+  font-size: 1.68rem;
+  font-weight: bold;
+  letter-spacing: -0.27px;
+  margin-block-end: 0;
+  margin-top: 1rem;
+}
+.option hr{
+  opacity: 0.4;
+  margin-top: 1rem;
+}
+
+.options{
+  padding: 1rem 0.94rem;
+}
+
 .parallax{
   height: auto;
   background-position: 50% 50%;
@@ -364,6 +412,23 @@ section {
 .products{
   margin-top: 6rem;
   padding: 2rem 0.94rem 1rem;
+}
+
+.quality{
+  padding: 4rem 0 0;
+}
+.quality h2{
+  padding-left: 0.94rem;
+}
+
+.secondary--btn{
+  background-color: var(--tertiary);
+  padding: 1.07rem 2.5rem;
+  border-radius: 2px;
+  font-weight: bold;
+  text-decoration: none;
+  color: var(--primary);
+  z-index: 12;
 }
 
 
