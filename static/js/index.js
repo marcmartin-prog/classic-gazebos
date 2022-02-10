@@ -33,6 +33,7 @@ fetch('/data/gazebos/price.json')
   .then(response => response.json())
   .then(function(data){
     gazeboPrices = data;
+
   })
   .catch(error => console.log(err));
 

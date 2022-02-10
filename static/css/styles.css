@@ -463,6 +463,41 @@ section {
   z-index: 12;
 }
 
+@media only screen and (min-width: 768px){
+
+  .card{
+    flex-direction: column;
+    flex-basis: 0;
+    flex-grow: 1;
+  }
+  .card img{
+    max-width: 2.5rem;
+  }
+
+  .hero--icons{
+    flex-direction: row;
+    margin-top: -4rem;
+  }
+
+  .hero--img{
+    margin-top: -3rem;
+  }
+
+  .hero--links{
+    position: absolute;
+    top: 2rem;
+    right: 10%;
+  }
+
+  .hero--text{
+    max-width: 45%;
+    position: relative;
+    left: 2rem
+  }
+
+
+}
+
 
 @media only screen and (min-width: 1024px){
 
