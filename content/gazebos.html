@@ -4,7 +4,9 @@ date: 2022-02-07T13:02:05-06:00
 draft: false
 description: "Classic Gazebos builds quality wooden gazebos for Arkansas, Texas, Tennessee, Kansas and Missouri"
 ---
+<script type="text/javascript" src="/js/gazebo-price.js">
 
+</script>
 <!--Gazebos hero section-->
 
 <section>
@@ -115,7 +117,7 @@ description: "Classic Gazebos builds quality wooden gazebos for Arkansas, Texas,
    <h2>Pricing <br><span class="light-text">Choose your options to calculate the price</span></h2>
    <div class="">
      <p id="trial"></p>
-     <select class="" name="style">
+     <select class="" name="style" id='style' onChange = "stylePrice(this.value)">
        <option value="Select Type" selected disabled hidden>Select Economy or Classic</option>
        <option value="economy">Economy</option>
        <option value="classic">Classic</option>

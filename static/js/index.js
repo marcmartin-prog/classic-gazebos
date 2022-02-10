@@ -26,6 +26,7 @@ menuCloseButton.addEventListener('click', menuClose);
 menuItems.addEventListener('click', menuClose);
 
 //gazebo pricing code
+/*
 let gazeboPrices;
 const tryout = document.getElementById(trial);
 
@@ -38,3 +39,16 @@ fetch('/data/gazebos/price.json')
   .catch(error => console.log(err));
 
 tryout.innerText = gazeboPrices.classic.octagon.price;
+
+
+
+
+const getPrice = () => {
+  return fetch('/data/gazebos/price.json')
+  .then(res => res.json())
+  .then(prices => console.log(prices))
+}
+
+getPrice();
+
+*/
