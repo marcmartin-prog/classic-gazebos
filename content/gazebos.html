@@ -115,7 +115,7 @@ description: "Classic Gazebos builds quality wooden gazebos for Arkansas, Texas,
    <h2>Pricing <br><span class="light-text">Choose your options to calculate the price</span></h2>
    <div class="">
      <p id="trial"></p>
-     <select class="" name="style" id='style' onChange = "stylePrice(this.value)">
+     <select class="" name="style" id='style' onChange = "">
        <option value="Select Type" selected disabled hidden>Select Economy or Classic</option>
        <option value="economy">Economy</option>
        <option value="classic">Classic</option>
@@ -126,20 +126,15 @@ description: "Classic Gazebos builds quality wooden gazebos for Arkansas, Texas,
        <option value="oval">Oval</option>
      </select>
      <select class="" name="size" id = "size" onchange="sizePrice(this.value)">
-       <option value="Choose Size" selected disabled hidden>Choose Size</option>
+       <option value="Choose Size" selected hidden>Choose Size</option>
 
      </select>
-     <select class="" name="roof">
-       <option value="Choose Roof" selected disabled hidden>Choose Roof</option>
-       <option value="single">Single Roof</option>
+     <select class="" name="roof" id="roof" onchange="roofPrice(this.value)">
+       <option value="Choose Roof" selected disabled hidden >Choose Roof</option>
+       <option value="price">Single Roof</option>
        <option value="double">Double Roof</option>
      </select>
-     <select class="" name="benches">
-       <option value="Add Benches" selected disabled hidden>Benches</option>
-       <option value="yes">Benches</option>
-       <option value="no">No Benches</option>
-     </select>
-     <select class="" name="sealed">
+     <select class="" name="sealed" id="sealed" onchange="sealedPrice(this.value)">
        <option value="sealed" selected disabled hidden>Sealing</option>
        <option value="Yes">Sealed</option>
        <option value="No">Not Sealed</option>
@@ -148,6 +143,11 @@ description: "Classic Gazebos builds quality wooden gazebos for Arkansas, Texas,
        <option value="screen" selected disabled hidden>Screening</option>
        <option value="Yes">Screened</option>
        <option value="No">Not Screened</option>
+     </select>
+     <select class="" name="benches">
+       <option value="Add Benches" selected disabled hidden>Benches</option>
+       <option value="yes">Benches</option>
+       <option value="no">No Benches</option>
      </select>
    </div>
    <div class="">

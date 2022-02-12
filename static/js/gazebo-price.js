@@ -178,19 +178,17 @@ const priceEl = document.getElementById("price-number");
 const styleSelect = document.getElementById("style");
 const shapeSelect = document.getElementById("shape");
 const sizeSelect = document.getElementById("size");
-let query = prices;
+const roofSelect = document.getElementById("roof");
+const sealedSelect = document.getElementById("sealed");
 
-const stylePrice = function () {
-  query = "prices." + styleSelect.value;
-  console.log(query);
-};
 
-console.log(query);
 
+// modifies the query after a user selects a shape and fills the size dropdown
 const shapePrice = function () {
-  query = "prices." + styleSelect.value + "." + shapeSelect.value;
   let option;
   if(shapeSelect.value == "octagon"){
+    sizeSelect.length = 1;
+    sizeSelect.selectedindex = 1;
     option = document.createElement('option');
     option.text = '8x8';
     option.value = '8x8';
@@ -208,6 +206,8 @@ const shapePrice = function () {
     option.value = '14x14';
     sizeSelect.add(option);
   } else if(shapeSelect.value == 'oval'){
+    sizeSelect.length = 1;
+    sizeSelect.selectedindex = 1;
     option = document.createElement('option');
     option.text = '8x12';
     option.value = '8x12';
@@ -237,5 +237,33 @@ const shapePrice = function () {
     option.value = '12x20';
     sizeSelect.add(option);
   }
-  console.log(query);
+};
+
+//calculates the base price from the sizePrice
+const sizePrice = function(){
+  let price = prices[styleSelect.value][shapeSelect.value][sizeSelect.value].price;
+  priceEl.innerText = price;
+};
+
+
+const roofPrice = function(){
+  if( roofSelect.value == "double"){
+    let price = prices[styleSelect.value][shapeSelect.value][sizeSelect.value].double;
+    priceEl.innerText = price;
+  } else{
+    let price = prices[styleSelect.value][shapeSelect.value][sizeSelect.value].price;
+    priceEl.innerText = price;
+  }
+};
+
+const sealedPrice = function(){
+  if (sealedSelect.value == "Yes"){
+     let price = prices[styleSelect.value][shapeSelect.value][sizeSelect.value][roofSelect.value];
+     let sealingPrice = prices[styleSelect.value][shapeSelect.value][sizeSelect.value].sealed;
+     let sealedPriceTotal = price + sealingPrice;
+     priceEl.innerText = sealedPriceTotal;
+   } else{
+      let price = prices[styleSelect.value][shapeSelect.value][sizeSelect.value][roofSelect.value];
+      priceEl.innerText = price;
+   }
 };
