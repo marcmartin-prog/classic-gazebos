@@ -180,15 +180,20 @@ const shapeSelect = document.getElementById("shape");
 const sizeSelect = document.getElementById("size");
 const roofSelect = document.getElementById("roof");
 const sealedSelect = document.getElementById("sealed");
+const screenedSelect = document.getElementById("screened");
+const benchesSelect = document.getElementById("benches");
+
+
 
 
 
 // modifies the query after a user selects a shape and fills the size dropdown
 const shapePrice = function () {
   let option;
+  let benches;
   if(shapeSelect.value == "octagon"){
     sizeSelect.length = 1;
-    sizeSelect.selectedindex = 1;
+    benchesSelect.length = 1;
     option = document.createElement('option');
     option.text = '8x8';
     option.value = '8x8';
@@ -205,9 +210,18 @@ const shapePrice = function () {
     option.text = '14x14';
     option.value = '14x14';
     sizeSelect.add(option);
+    benches  = document.createElement('option');
+    benches.text = "Benches";
+    benches.value = "benches";
+    benchesSelect.add(benches);
+    benches  = document.createElement('option');
+    benches.text = "No Benches";
+    benches.value = "no-benches";
+    benchesSelect.add(benches);
+
   } else if(shapeSelect.value == 'oval'){
     sizeSelect.length = 1;
-    sizeSelect.selectedindex = 1;
+    benchesSelect.length = 1;
     option = document.createElement('option');
     option.text = '8x12';
     option.value = '8x12';
@@ -236,8 +250,30 @@ const shapePrice = function () {
     option.text = '12x20';
     option.value = '12x20';
     sizeSelect.add(option);
+    benches  = document.createElement('option');
+    benches.text = "No Benches";
+    benches.value = "0";
+    benchesSelect.add(benches);
+    benches  = document.createElement('option');
+    benches.text = "1 Section";
+    benches.value = "1";
+    benchesSelect.add(benches);
+    benches  = document.createElement('option');
+    benches.text = "2 Sections";
+    benches.value = "2";
+    benchesSelect.add(benches);
+    benches  = document.createElement('option');
+    benches.text = "3 Sections";
+    benches.value = "3";
+    benchesSelect.add(benches);
+    benches  = document.createElement('option');
+    benches.text = "4 Sections";
+    benches.value = "4";
+    benchesSelect.add(benches);
   }
 };
+
+
 
 //calculates the base price from the sizePrice
 const sizePrice = function(){
@@ -266,4 +302,119 @@ const sealedPrice = function(){
       let price = prices[styleSelect.value][shapeSelect.value][sizeSelect.value][roofSelect.value];
       priceEl.innerText = price;
    }
+};
+
+const screenPrice = function(){
+  if (screenedSelect.value == "Yes"){
+     let price = prices[styleSelect.value][shapeSelect.value][sizeSelect.value][roofSelect.value];
+     let sealingPrice = prices[styleSelect.value][shapeSelect.value][sizeSelect.value].sealed;
+     let screeningPrice = prices[styleSelect.value][shapeSelect.value][sizeSelect.value].screened;
+     if (sealedSelect.value == "Yes"){
+       let screenedPriceTotal = price + sealingPrice + screeningPrice;
+       priceEl.innerText = screenedPriceTotal;
+     } else{
+       let screenedPriceTotal = price + screeningPrice;
+       priceEl.innerText = screenedPriceTotal;
+     }
+
+   } else{
+      let price = prices[styleSelect.value][shapeSelect.value][sizeSelect.value][roofSelect.value];
+      if (sealedSelect.value == "Yes"){
+        let sealingPrice = prices[styleSelect.value][shapeSelect.value][sizeSelect.value].sealed;
+        let screenedPriceTotal = price + sealingPrice;
+        priceEl.innerText = screenedPriceTotal;
+      } else{
+        let screenedPriceTotal = price;
+        priceEl.innerText = screenedPriceTotal;
+      }
+   }
+};
+
+const benchPrice = function(){
+  if(shapeSelect.value == "octagon"){
+    if (screenedSelect.value == "Yes"){
+      let price = prices[styleSelect.value][shapeSelect.value][sizeSelect.value][roofSelect.value];
+      let sealingPrice = prices[styleSelect.value][shapeSelect.value][sizeSelect.value].sealed;
+      let screeningPrice = prices[styleSelect.value][shapeSelect.value][sizeSelect.value].screened;
+      let benchesPrice = prices[styleSelect.value][shapeSelect.value][sizeSelect.value].benches;
+       if (sealedSelect.value == "Yes"){
+         if(benchesSelect.value == "benches"){
+           let screenedPriceTotal = price + sealingPrice + screeningPrice + benchesPrice;
+           priceEl.innerText = screenedPriceTotal;
+         }else{
+           let screenedPriceTotal = price + sealingPrice + screeningPrice;
+           priceEl.innerText = screenedPriceTotal;
+         }
+       } else{
+         let screenedPriceTotal = price + screeningPrice;
+         priceEl.innerText = screenedPriceTotal;
+       }
+
+     } else{
+        let price = prices[styleSelect.value][shapeSelect.value][sizeSelect.value][roofSelect.value];
+        if (sealedSelect.value == "Yes"){
+          let sealingPrice = prices[styleSelect.value][shapeSelect.value][sizeSelect.value].sealed;
+          if(benchesSelect.value == "benches"){
+            let screenedPriceTotal = price + sealingPrice + benchesPrice;
+            priceEl.innerText = screenedPriceTotal;
+          }else{
+            let screenedPriceTotal = price + sealingPrice;
+            priceEl.innerText = screenedPriceTotal;
+          }
+          let screenedPriceTotal = price + sealingPrice;
+          priceEl.innerText = screenedPriceTotal;
+        } else{
+          if(benchesSelect.value == "benches"){
+            let screenedPriceTotal = price + benchesPrice;
+            priceEl.innerText = screenedPriceTotal;
+          }else{
+            let screenedPriceTotal = price;
+            priceEl.innerText = screenedPriceTotal;
+          }
+        }
+     }
+  }else{
+    if (screenedSelect.value == "Yes"){
+      let price = prices[styleSelect.value][shapeSelect.value][sizeSelect.value][roofSelect.value];
+      let sealingPrice = prices[styleSelect.value][shapeSelect.value][sizeSelect.value].sealed;
+      let screeningPrice = prices[styleSelect.value][shapeSelect.value][sizeSelect.value].screened;
+      let benchesPrice = prices[styleSelect.value][shapeSelect.value][sizeSelect.value].benches;
+       if (sealedSelect.value == "Yes"){
+         if(benchesSelect.value >= 1){
+           let screenedPriceTotal = price + sealingPrice + screeningPrice + (benchesPrice * benchesSelect.value);
+           priceEl.innerText = screenedPriceTotal;
+         }else{
+           let screenedPriceTotal = price + sealingPrice + screeningPrice;
+           priceEl.innerText = screenedPriceTotal;
+         }
+       } else{
+         let screenedPriceTotal = price + screeningPrice;
+         priceEl.innerText = screenedPriceTotal;
+       }
+
+     } else{
+        let price = prices[styleSelect.value][shapeSelect.value][sizeSelect.value][roofSelect.value];
+        if (sealedSelect.value == "Yes"){
+          let sealingPrice = prices[styleSelect.value][shapeSelect.value][sizeSelect.value].sealed;
+          if(benchesSelect.value >= 1){
+            let screenedPriceTotal = price + sealingPrice + (benchesPrice * benchesSelect.value);
+            priceEl.innerText = screenedPriceTotal;
+          }else{
+            let screenedPriceTotal = price + sealingPrice;
+            priceEl.innerText = screenedPriceTotal;
+          }
+          let screenedPriceTotal = price + sealingPrice;
+          priceEl.innerText = screenedPriceTotal;
+        } else{
+          if(benchesSelect.value >= 1){
+            let screenedPriceTotal = price + (benchesPrice * benchesSelect.value);
+            priceEl.innerText = screenedPriceTotal;
+          }else{
+            let screenedPriceTotal = price;
+            priceEl.innerText = screenedPriceTotal;
+          }
+        }
+     }
+
+  }
 };

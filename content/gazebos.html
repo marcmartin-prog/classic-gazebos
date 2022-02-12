@@ -139,15 +139,13 @@ description: "Classic Gazebos builds quality wooden gazebos for Arkansas, Texas,
        <option value="Yes">Sealed</option>
        <option value="No">Not Sealed</option>
      </select>
-     <select class="" name="screen">
+     <select class="" name="screen" id="screened" onchange="screenPrice(this.value)">
        <option value="screen" selected disabled hidden>Screening</option>
        <option value="Yes">Screened</option>
        <option value="No">Not Screened</option>
      </select>
-     <select class="" name="benches">
-       <option value="Add Benches" selected disabled hidden>Benches</option>
-       <option value="yes">Benches</option>
-       <option value="no">No Benches</option>
+     <select class="" name="benches" id="benches" onchange="benchPrice(this.value)">
+       <option value="Add Benches" selected  hidden>Benches</option>
      </select>
    </div>
    <div class="">
