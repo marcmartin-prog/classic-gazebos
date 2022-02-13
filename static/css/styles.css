@@ -186,6 +186,11 @@ section {
   display: flex;
   flex-direction: column;
 }
+.left-links, .right-links{
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+}
 
 .footer--links a{
   font-size: 1rem;
@@ -279,6 +284,9 @@ section {
 .hp--img{
   position: relative;
   top: 4rem;
+}
+.hp--img img{
+  width: 100%;
 }
 .hp--text{
   margin-bottom: -3rem;
@@ -464,14 +472,73 @@ section {
 }
 
 @media only screen and (min-width: 768px){
+  footer{
+    position: relative;
+    .padding-top: 3rem;
+  }
+  .about-us--details{
+    position: relative;
+  }
+
+  .about-us--details img{
+    margin-top: 3rem;
+  }
+
+  .about-us--text{
+    max-width: 60%;
+    position: absolute;
+    top:-5rem;
+    right: 0;
+    z-index: 3;
+    background: var(--secondary);
+    padding: 0 0.94rem 0.5rem 1rem;
+  }
 
   .card{
     flex-direction: column;
     flex-basis: 0;
     flex-grow: 1;
+    justify-content: space-between;
+    gap: 3rem;
   }
   .card img{
     max-width: 2.5rem;
+  }
+
+  .delivery{
+    margin-top: 3.5rem;
+  }
+
+  .foo-phone{
+    padding-top: 0.5rem;
+    padding-right: 3rem;
+    border-right: 2px solid rgba(39, 48, 67, 0.4);
+  }
+  .foo-phone::before{
+    left: 82%;
+    right: 0.5rem;
+  }
+  .footer--contacts{
+    display: flex;
+    max-width: fit-content;
+    gap: 1rem;
+    margin: auto;
+    padding-left: 3rem;
+  }
+
+  .footer--logo{
+    margin: 3rem auto 0;
+  }
+
+  .footer-rule{
+    max-width: 80%;
+    width: 80%;
+    margin: auto;
+    left: 0;
+    right: 0;
+    position: absolute;
+    top: -2rem;
+    z-index: 10;
   }
 
   .hero--icons{
@@ -493,6 +560,60 @@ section {
     max-width: 45%;
     position: relative;
     left: 2rem
+  }
+
+  .hp{
+    padding:3rem 20% 0;
+  }
+
+  .hp--img{
+    max-width: 70vw;
+  }
+
+  .left-links{
+    position: absolute;
+    left: 2rem;
+    top: 0;
+  }
+  .right-links{
+    position: absolute;
+    right: 2rem;
+    top: 0;
+  }
+  .left-links a{
+    text-align: left;
+  }
+  .right-links a{
+    text-align: right;
+  }
+
+  .location{
+    display: flex;
+    gap: 2rem;
+  }
+  .location div{
+    flex-basis: 0;
+    flex-grow: 1;
+  }
+
+  .logo img{
+    height: 3.5rem;
+  }
+
+  .product{
+    flex-basis: 0;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .product--lf{
+    flex-direction: column-reverse;
+  }
+
+  .product--parent{
+    display: flex;
+    gap: 1rem;
   }
 
 

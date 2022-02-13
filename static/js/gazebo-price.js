@@ -354,6 +354,7 @@ const benchPrice = function(){
         let price = prices[styleSelect.value][shapeSelect.value][sizeSelect.value][roofSelect.value];
         if (sealedSelect.value == "Yes"){
           let sealingPrice = prices[styleSelect.value][shapeSelect.value][sizeSelect.value].sealed;
+          let benchesPrice = prices[styleSelect.value][shapeSelect.value][sizeSelect.value].benches;
           if(benchesSelect.value == "benches"){
             let screenedPriceTotal = price + sealingPrice + benchesPrice;
             priceEl.innerText = screenedPriceTotal;
@@ -365,6 +366,7 @@ const benchPrice = function(){
           priceEl.innerText = screenedPriceTotal;
         } else{
           if(benchesSelect.value == "benches"){
+            let benchesPrice = prices[styleSelect.value][shapeSelect.value][sizeSelect.value].benches;
             let screenedPriceTotal = price + benchesPrice;
             priceEl.innerText = screenedPriceTotal;
           }else{
@@ -396,6 +398,7 @@ const benchPrice = function(){
         let price = prices[styleSelect.value][shapeSelect.value][sizeSelect.value][roofSelect.value];
         if (sealedSelect.value == "Yes"){
           let sealingPrice = prices[styleSelect.value][shapeSelect.value][sizeSelect.value].sealed;
+          let benchesPrice = prices[styleSelect.value][shapeSelect.value][sizeSelect.value].benches;
           if(benchesSelect.value >= 1){
             let screenedPriceTotal = price + sealingPrice + (benchesPrice * benchesSelect.value);
             priceEl.innerText = screenedPriceTotal;
@@ -407,6 +410,7 @@ const benchPrice = function(){
           priceEl.innerText = screenedPriceTotal;
         } else{
           if(benchesSelect.value >= 1){
+            let benchesPrice = prices[styleSelect.value][shapeSelect.value][sizeSelect.value].benches;
             let screenedPriceTotal = price + (benchesPrice * benchesSelect.value);
             priceEl.innerText = screenedPriceTotal;
           }else{
