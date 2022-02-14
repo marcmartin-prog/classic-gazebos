@@ -41,6 +41,9 @@
     font-style: normal;
 }
 
+a{
+  font-family: 'RedHatDisplay', sans-serif;
+}
 
 body {
   margin: 0;
@@ -291,7 +294,7 @@ section {
 .hp--text{
   margin-bottom: -3rem;
 }
-.hp--text h3, .hp--text h2, .hp--text p{
+.hp--text h3, .hp h2, .hp--text p{
   color: var(--secondary);
   opacity: 1;
 }
@@ -554,7 +557,7 @@ section {
   .hero--links{
     position: absolute;
     top: 2rem;
-    right: 10%;
+    right: 7%;
   }
 
   .hero--text{
@@ -600,6 +603,7 @@ section {
   .logo img{
     height: 3.5rem;
   }
+
 
   .product{
     flex-basis: 0;
@@ -658,8 +662,33 @@ section {
     max-width: 25rem;
   }
 
+  .hp{
+    padding: 3rem 3rem 2rem;
+    margin: 0 3rem;
+  }
+
+  .hp--columns{
+    display: flex;
+    gap: 1rem;
+  }
+
+  .hp--img{
+    max-width: 55vw;
+    width: 55vw;
+  }
+
   .logo img{
     margin: 0 2rem;
+    height: 4rem;
+  }
+
+  .menu{
+    margin-top: 1.5rem;
+    justify-content: space-between;
+    width: 100vw;
+  }
+  .mobile{
+    display: none;
   }
   .main--link{
     font-size: 2.5rem;
