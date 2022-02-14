@@ -471,7 +471,7 @@ section {
   z-index: 12;
 }
 
-@media only screen and (min-width: 768px){
+@media only screen and (min-width: 700px){
   footer{
     position: relative;
     .padding-top: 3rem;
@@ -511,19 +511,20 @@ section {
 
   .foo-phone{
     padding-top: 0.5rem;
-    padding-right: 3rem;
+    padding-right: 4rem;
     border-right: 2px solid rgba(39, 48, 67, 0.4);
   }
   .foo-phone::before{
-    left: 82%;
+    left: 77%;
     right: 0.5rem;
+    top: 5px;
   }
   .footer--contacts{
     display: flex;
     max-width: fit-content;
     gap: 1rem;
     margin: auto;
-    padding-left: 3rem;
+    padding-left: 2rem;
   }
 
   .footer--logo{
@@ -621,9 +622,47 @@ section {
 
 
 @media only screen and (min-width: 1024px){
+  h1, h2{
+    font-size: 2.5rem;
+  }
+  p{
+    font-size: 1rem;
+  }
+  header{
+    padding: 0 2rem 2rem;
+  }
+
+  section{
+    margin: 0 2rem;
+  }
 
   .hamburger{
     display: none;
+  }
+
+  .hero--img{
+    margin: 3rem -2rem 0;
+    width: 100vw;
+  }
+
+  .hero--links{
+    right: 15%;
+    top: 3rem;
+  }
+
+  .hero--text{
+    padding: 2.5rem;
+    max-width: 39%;
+  }
+  .hero--text h1, .hero--text p{
+    max-width: 25rem;
+  }
+
+  .logo img{
+    margin: 0 2rem;
+  }
+  .main--link{
+    font-size: 2.5rem;
   }
 
   .menu{
@@ -638,10 +677,14 @@ section {
 
   .menu a{
     text-decoration: none;
-    color: white;
+    color: var(--primary);
     margin: 0 1.5rem;
     font-family: 'plus-Jakarta-Sans', sans-serif;
     font-size: 1rem;
     font-weight: bold;
+  }
+  .menu-link{
+    position: relative;
+    top: 2rem;
   }
 }
