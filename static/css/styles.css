@@ -238,6 +238,10 @@ section {
   width: 100%;
   margin-top: 2px;
 }
+.hero-gazebo--img{
+  width: 100%;
+  margin-top: 2px;
+}
 
 .hero--links{
    display: flex;
@@ -272,7 +276,7 @@ section {
   color: var(--secondary);
   max-width: 21rem;
 }
-.hero--text::after{
+.hero--text::after, .gazebo{
   content: url(/images/graphic.svg);
   position: absolute;
   bottom: 1.5rem;
@@ -640,6 +644,16 @@ section {
     margin: 0 2rem;
   }
 
+  .gazebo-hero{
+    display: flex;
+  }
+
+  .gazebo-hero--img-parent{
+    flex: 1;
+    margin-top: 0;
+  }
+
+
   .hamburger{
     display: none;
   }
@@ -657,6 +671,17 @@ section {
   .hero--text{
     padding: 2.5rem;
     max-width: 39%;
+  }
+  .hero-gazebo--img{
+    margin-top: 0;
+    margin-left: 2px;
+    height: 100%;
+    object-fit: cover;
+  }
+  .gazebo-hero--text{
+    flex: 2;
+    max-width: 66%;
+
   }
   .hero--text h1, .hero--text p{
     max-width: 25rem;
@@ -715,6 +740,10 @@ section {
   .menu-link{
     position: relative;
     top: 2rem;
+  }
+
+  .quality h2{
+    margin: 3rem 0.94rem 6rem;
   }
 }
 
