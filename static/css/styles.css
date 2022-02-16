@@ -51,6 +51,11 @@ body {
   background-color: var(--secondary);
 }
 
+form{
+  display: flex;
+  flex-direction: column;
+}
+
 header {
   display: flex;
   flex-direction: row;
@@ -93,6 +98,41 @@ html{
   scroll-behavior: smooth;
 }
 
+input, textarea{
+  font-family: 'plus-Jakarta-Sans', sans-serif;
+  font-weight: bold;
+  border: none;
+  border-bottom: 1px solid rgb(39, 48, 67, 0.2);
+  padding: 0 20px 10px 0;
+}
+
+input[type=email], input[type=text], input[type=phone], textarea{
+  background-color: rgba(39, 48, 67, 0);
+  color: var(--primary);
+  margin-bottom: 2rem;
+}
+
+input[type=email], input[type=button] {
+-webkit-appearance: none;
+-webkit-border-radius: 0;
+}
+input[type=submit]{
+  border-radius: 4px;
+  padding: 1.128rem 2rem;
+  width: 100%;
+  letter-spacing: 2.24px;
+  background-color: var(--tertiary);
+}
+
+input:focus, textarea:focus, select:focus{
+        outline: none;
+}
+
+label{
+  color: var(--primary);
+  font-weight: bold;
+}
+
 p {
   font-family: 'RedHatDisplay', sans-serif;
   font-size: 0.875rem;
@@ -114,6 +154,18 @@ section {
   font-size: 1.75rem;
   line-height: 1.5;
   letter-spacing: 0.56px;
+}
+.aqua--link{
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--tertiary);
+  margin: 0.8rem 0;
+  display: block;
+}
+.aqua--link::after{
+  content: url(/images/aqua-arrow.svg);
+  position: absolute;
+ margin-left: 0.75rem;
 }
 
 .card{
@@ -142,6 +194,10 @@ section {
 }
 .card--gaz h3{
   margin-top: 0.5rem;
+}
+
+.contact-us{
+  padding: 2rem 0.94rem;
 }
 
 .delivery{
@@ -644,6 +700,14 @@ section {
     margin: 0 2rem;
   }
 
+  .aqua--link{
+    font-size: 2.2rem;
+  }
+
+  .card--gaz{
+    flex: 1;
+  }
+
   .gazebo-hero{
     display: flex;
   }
@@ -656,6 +720,10 @@ section {
 
   .hamburger{
     display: none;
+  }
+
+  .hero--buttons{
+    margin-top: 2rem;
   }
 
   .hero--img{
@@ -681,10 +749,13 @@ section {
   .gazebo-hero--text{
     flex: 2;
     max-width: 66%;
-
+    border-right: solid 2px white;
   }
   .hero--text h1, .hero--text p{
     max-width: 25rem;
+  }
+  .gazebo-hero--text h1, .gazebo-hero--text p{
+    max-width: 40rem;
   }
 
   .hp{
@@ -742,8 +813,51 @@ section {
     top: 2rem;
   }
 
+  .options{
+    padding: 1rem 3.5rem;
+  }
+
+  .option{
+    display: flex;
+    gap: 2rem;
+  }
+  .option img, .option div{
+    flex-shrink: 0;
+    flex-grow: 1;
+    flex-basis: 49%;
+  }
+  .option div{
+    padding-top: 5rem;
+  }
+
+  .price-parent{
+    padding: 5rem 3rem;
+  }
+
+  .pricing{
+    padding: 2.5rem 3.5rem;
+  }
+  .pricing-selector{
+    display: flex;
+    gap: 2rem;
+  }
+  .pricing-selector div{
+    flex: 1;
+  }
+
+  .quality{
+    padding: 4rem 3rem 0;
+  }
+
   .quality h2{
     margin: 3rem 0.94rem 6rem;
+  }
+  .quality h3{
+    margin-block-end: 0;
+  }
+
+  .reverse{
+    flex-direction: row-reverse;
   }
 }
 
@@ -754,9 +868,12 @@ section {
     margin: 0 4rem;
   }
 
+  .card--gaz{
+    flex-direction: column;
+  }
+
   .hero--icons{
     gap: 2rem;
-    max-width: 80%;
     margin: -4rem auto 3rem;
   }
   .hero--img{
@@ -772,8 +889,14 @@ section {
     max-width: 36%;
     padding: 5rem;
   }
+  .gazebo-hero--text{
+    max-width: 66%;
+  }
   .hero--text h1, .hero--text p{
     max-width: 31rem;
+  }
+  .gazebo-hero--text h1, .gazebo-hero--text p{
+    max-width: 54rem;
   }
   .hp{
     margin: 0 4rem;
@@ -820,7 +943,7 @@ section {
   }
 
   .hero--icons{
-    margin: -8rem auto 5rem;
+    margin: -4rem auto 5rem;
   }
 
   .hero--img{

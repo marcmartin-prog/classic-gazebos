@@ -57,15 +57,17 @@ description: "Classic Gazebos builds quality wooden gazebos for Arkansas, Texas,
 <section id="options" class="options">
   <h2>Options <br><span class="light-text">For Your Gazebo</span></h2>
   <div class="">
-    <div class="option">
+    <div class="option reverse">
       <picture class="">
         <source srcset="/images/screened.webp" type="image/webp">
         <source srcset="/images/screened.jpg" type="image/jpg">
         <img src="/images/screened.jpg" alt="screened in gazebos" class="">
       </picture>
-      <h3>Screening</h3>
-      <hr>
-      <p>Get your gazebo screened in to allow you to enjoy it without insects bothering you.</p>
+      <div class="">
+        <h3>Screening</h3>
+        <hr>
+        <p>Get your gazebo screened in to allow you to enjoy it without insects bothering you.</p>
+      </div>
     </div>
     <div class="option">
       <picture class="">
@@ -73,19 +75,23 @@ description: "Classic Gazebos builds quality wooden gazebos for Arkansas, Texas,
         <source srcset="/images/colors.jpg" type="image/jpg">
         <img src="/images/colors.jpg" alt="gazebo color options" class="">
       </picture>
+      <div class="">
       <h3>Colors</h3>
       <hr>
       <p>Choose your roof colors to get a look that fits well wherever you want it.</p>
+      </div>
     </div>
-    <div class="option">
+    <div class="option reverse">
       <picture class="">
         <source srcset="/images/roof.webp" type="image/webp">
         <source srcset="/images/roof.jpg" type="image/jpg">
         <img src="/images/roof.jpg" alt="gazebo roof options" class="">
       </picture>
+      <div class="">
       <h3>Roof</h3>
       <hr>
       <p>You can choose between architectural shingles or a metal roof.</p>
+      </div>
     </div>
     <div class="option">
       <picture class="">
@@ -93,19 +99,23 @@ description: "Classic Gazebos builds quality wooden gazebos for Arkansas, Texas,
         <source srcset="/images/benches.jpg" type="image/jpg">
         <img src="/images/benches.jpg" alt="built in benches" class="">
       </picture>
+      <div class="">
       <h3>Benches</h3>
       <hr>
       <p>Increase ease and comfort by adding built-in benches to your gazebo. </p>
+      </div>
     </div>
-    <div class="option">
+    <div class="option reverse">
       <picture class="">
         <source srcset="/images/sealing.webp" type="image/webp">
         <source srcset="/images/sealing.jpg" type="image/jpg">
         <img src="/images/sealing.jpg" alt="gazebo sealing options" class="">
       </picture>
+      <div class="">
       <h3>Sealing</h3>
       <hr>
       <p>Add durability and beauty by adding a quality sealer to your gazebo to keep the wood from deteriorating over time.</p>
+      </div>
     </div>
   </div>
 </section>
@@ -113,44 +123,47 @@ description: "Classic Gazebos builds quality wooden gazebos for Arkansas, Texas,
 <!--Pricing Section-->
 <section id="pricing" class="pricing">
    <h2>Pricing <br><span class="light-text">Choose your options to calculate the price</span></h2>
-   <div class="">
-     <p id="trial"></p>
-     <select class="" name="style" id='style' onChange = "">
-       <option value="Select Type" selected disabled hidden>Select Economy or Classic</option>
-       <option value="economy">Economy</option>
-       <option value="classic">Classic</option>
-     </select>
-     <select class="" name="shape" id ='shape' onChange="shapePrice(this.value)">
-       <option value="Choose Shape" selected disabled hidden>Choose Shape</option>
-       <option value="octagon">Octagon</option>
-       <option value="oval">Oval</option>
-     </select>
-     <select class="" name="size" id = "size" onchange="sizePrice(this.value)">
-       <option value="Choose Size" selected hidden>Choose Size</option>
+   <div class="pricing-selector">
+     <div class="">
+       <p id="trial"></p>
+       <select class="" name="style" id='style' onChange = "">
+         <option value="Select Type" selected disabled hidden>Select Economy or Classic</option>
+         <option value="economy">Economy</option>
+         <option value="classic">Classic</option>
+       </select>
+       <select class="" name="shape" id ='shape' onChange="shapePrice(this.value)">
+         <option value="Choose Shape" selected disabled hidden>Choose Shape</option>
+         <option value="octagon">Octagon</option>
+         <option value="oval">Oval</option>
+       </select>
+       <select class="" name="size" id = "size" onchange="sizePrice(this.value)">
+         <option value="Choose Size" selected hidden>Choose Size</option>
 
-     </select>
-     <select class="" name="roof" id="roof" onchange="roofPrice(this.value)">
-       <option value="Choose Roof" selected disabled hidden >Choose Roof</option>
-       <option value="price">Single Roof</option>
-       <option value="double">Double Roof</option>
-     </select>
-     <select class="" name="sealed" id="sealed" onchange="sealedPrice(this.value)">
-       <option value="sealed" selected disabled hidden>Sealing</option>
-       <option value="Yes">Sealed</option>
-       <option value="No">Not Sealed</option>
-     </select>
-     <select class="" name="screen" id="screened" onchange="screenPrice(this.value)">
-       <option value="screen" selected disabled hidden>Screening</option>
-       <option value="Yes">Screened</option>
-       <option value="No">Not Screened</option>
-     </select>
-     <select class="" name="benches" id="benches" onchange="benchPrice(this.value)">
-       <option value="Add Benches" selected  hidden>Benches</option>
-     </select>
-   </div>
-   <div class="">
-     <p class="price"><span class="light-text">Your price is:</span><br>$<span id="price-number">0</span></p>
-     <p>Price does not include shipping or taxes. <br>Onsite Construction is available for an additional cost.</p>
+       </select>
+       <select class="" name="roof" id="roof" onchange="roofPrice(this.value)">
+         <option value="Choose Roof" selected disabled hidden >Choose Roof</option>
+         <option value="price">Single Roof</option>
+         <option value="double">Double Roof</option>
+       </select>
+       <select class="" name="sealed" id="sealed" onchange="sealedPrice(this.value)">
+         <option value="sealed" selected disabled hidden>Sealing</option>
+         <option value="Yes">Sealed</option>
+         <option value="No">Not Sealed</option>
+       </select>
+       <select class="" name="screen" id="screened" onchange="screenPrice(this.value)">
+         <option value="screen" selected disabled hidden>Screening</option>
+         <option value="Yes">Screened</option>
+         <option value="No">Not Screened</option>
+       </select>
+       <select class="" name="benches" id="benches" onchange="benchPrice(this.value)">
+         <option value="Add Benches" selected  hidden>Benches</option>
+       </select>
+     </div>
+     <div class="price-parent">
+       <p class="price"><span class="light-text">Your price is:</span><br>$<span id="price-number">0</span></p>
+       <p>Price does not include shipping or taxes. <br>Onsite Construction is available for an additional cost.</p>
+       <a href="/contact-us" class="aqua--link">Get In Touch and Order</a>
+     </div>
    </div>
 </section>
 <script type="text/javascript" src="/js/gazebo-price.js">
