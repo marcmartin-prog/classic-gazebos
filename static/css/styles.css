@@ -56,6 +56,10 @@ form{
   flex-direction: column;
 }
 
+footer{
+  padding-top: 3rem;
+}
+
 header {
   display: flex;
   flex-direction: row;
@@ -196,6 +200,13 @@ section {
   margin-top: 0.5rem;
 }
 
+.contact{
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-top: 4rem;
+}
+
 .contact-us{
   padding: 2rem 0.94rem;
 }
@@ -309,13 +320,36 @@ section {
   font-weight: bold;
   color: var(--primary);
   margin: 0.8rem 0;
-  display: block;
+  display: inline;
+  position: relative;
+  z-index: 1;
+  max-width: max-content;
+  text-decoration: none;
+  border-bottom: 1px solid var(--primary);
+}
+.main--link::before{
+  transition: 0.3s all ease;
+  position: absolute;
+  top: -1rem;
+  left: -1rem;
+  bottom: -1rem;
+  right: 100%;
+  content: "";
+  background-color: var(--tertiary);
+  opacity: 0;
+}
+.main--link:hover::before{
+  transition: 0.3s all ease;
+  right: -3rem;
+  opacity: 1;
+  z-index: -1;
 }
 .main--link::after{
   content: url(/images/Icons_Arrow-link.svg);
   position: absolute;
  margin-left: 0.75rem;
 }
+
 
 .hero--buttons{
   display: flex;
@@ -537,8 +571,12 @@ section {
 @media only screen and (min-width: 700px){
   footer{
     position: relative;
-    .padding-top: 3rem;
   }
+
+  input[type=submit]{
+    width: 15rem;
+  }
+
   .about-us--details{
     position: relative;
   }
@@ -566,6 +604,10 @@ section {
   }
   .card img{
     max-width: 2.5rem;
+  }
+
+  .contact-us{
+    padding: 2rem 4rem;
   }
 
   .delivery{
@@ -601,7 +643,7 @@ section {
     left: 0;
     right: 0;
     position: absolute;
-    top: -2rem;
+    top: 2rem;
     z-index: 10;
   }
 
@@ -637,12 +679,12 @@ section {
   .left-links{
     position: absolute;
     left: 2rem;
-    top: 0;
+    top: 6rem;
   }
   .right-links{
     position: absolute;
     right: 2rem;
-    top: 0;
+    top: 6rem;
   }
   .left-links a{
     text-align: left;
@@ -706,6 +748,14 @@ section {
 
   .card--gaz{
     flex: 1;
+  }
+
+  .contact{
+    flex-direction: row;
+  }
+  .contact div{
+    flex: 1;
+    width: 50%;
   }
 
   .gazebo-hero{
@@ -811,6 +861,10 @@ section {
   .menu-link{
     position: relative;
     top: 2rem;
+    transition: 0.3s;
+  }
+  .menu-link:hover{
+    text-decoration: underline;
   }
 
   .options{
