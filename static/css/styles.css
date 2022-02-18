@@ -109,6 +109,10 @@ input, textarea{
   border-bottom: 1px solid rgb(39, 48, 67, 0.2);
   padding: 0 20px 10px 0;
 }
+input[type=file]{
+  border-bottom: none;
+  display: none;
+}
 
 input[type=email], input[type=text], input[type=phone], textarea{
   background-color: rgba(39, 48, 67, 0);
@@ -291,6 +295,13 @@ section {
   height: 1px;
   background-color: var(--primary);
   opacity: 0.4;
+}
+
+.gallery-section{
+  padding: 4rem 0 3rem 0.94rem;
+}
+.gallery-section h2{
+  margin-block-end: 0;
 }
 
 .hero--icons{
@@ -568,6 +579,20 @@ section {
   z-index: 12;
 }
 
+.upload{
+  padding: 4rem 0.94rem 1rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.upload-btn{
+  background-color: var(--primary)!important;
+  color: var(--secondary);
+  max-width: 10rem;
+  margin-top: 2rem;
+}
+
 @media only screen and (min-width: 700px){
   footer{
     position: relative;
@@ -604,6 +629,10 @@ section {
   }
   .card img{
     max-width: 2.5rem;
+  }
+  .card--gaz{
+    flex-direction: column;
+    flex: 1;
   }
 
   .contact-us{
@@ -647,6 +676,22 @@ section {
     z-index: 10;
   }
 
+  .gazebo-hero{
+    display: flex;
+  }
+
+  .gazebo-hero--img-parent{
+    flex: 1;
+    margin-top: 0;
+  }
+
+  .hero-gazebo--img{
+    margin-top: 0;
+    margin-left: 2px;
+    height: 100%;
+    object-fit: cover;
+  }
+
   .hero--icons{
     flex-direction: row;
     margin-top: -4rem;
@@ -666,6 +711,9 @@ section {
     max-width: 45%;
     position: relative;
     left: 2rem
+  }
+  .gazebo-hero .hero--text{
+    left: 0;
   }
 
   .hp{
@@ -723,6 +771,27 @@ section {
     gap: 1rem;
   }
 
+  .quality .hero--icons{
+    margin-top: 0;
+  }
+
+  .upload{
+    flex-direction: row;
+  }
+  .upload div{
+    flex: 1;
+  }
+
+  .upload--text{
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: space-between;
+  }
+  .upload--text img{
+    max-height: 3rem;
+    align-self: flex-start;
+  }
+
 
 }
 
@@ -758,14 +827,7 @@ section {
     width: 50%;
   }
 
-  .gazebo-hero{
-    display: flex;
-  }
 
-  .gazebo-hero--img-parent{
-    flex: 1;
-    margin-top: 0;
-  }
 
 
   .hamburger{
@@ -790,12 +852,7 @@ section {
     padding: 2.5rem;
     max-width: 39%;
   }
-  .hero-gazebo--img{
-    margin-top: 0;
-    margin-left: 2px;
-    height: 100%;
-    object-fit: cover;
-  }
+
   .gazebo-hero--text{
     flex: 2;
     max-width: 66%;
@@ -922,9 +979,7 @@ section {
     margin: 0 4rem;
   }
 
-  .card--gaz{
-    flex-direction: column;
-  }
+
 
   .hero--icons{
     gap: 2rem;

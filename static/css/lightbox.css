@@ -222,9 +222,10 @@ body.lb-disable-scrolling {
   scroll-snap-align: start;
 }
 .gallery-parent>a>img{
-width: 100vw;
+width: 80vw;
   margin: 3px;
-  height: 250px;
+  height: 196px;
+  object-fit: cover;
 }
 
 
@@ -251,12 +252,18 @@ width: 100vw;
   display: none;
 }
 
+@media only screen and (min-width: 700px){
+  .gallery-parent>a>img{
+    height: 415px;
+  }
+}
+
 @media only screen and (min-width: 1024px){
 
     .gallery-parent{
-      width: 40rem;
+      width: 90vw;
       margin: auto;
-
+      margin-bottom: 6rem;
     }
     .gallery-parent>a>img{
       width: 40rem;
@@ -268,21 +275,21 @@ width: 100vw;
     }
     #prev-btn{
       transform: rotate(180deg);
-      top: 40%;
-      left: 3rem;
+      bottom: -6rem;
+      left: 1rem;
     }
     #next-btn{
-      top: 40%;
-      right: 3rem;
+      bottom: -6rem;
+      left: 6rem;
     }
 }
 
 @media only screen and (min-width: 1360px){
   .gallery-parent{
-    width: 60rem;
+    width: 95vw;
   }
   .gallery-parent>a>img{
-    width: 60rem;
-    height: 650px;
+    width: 45rem;
+    height: 450px;
   }
 }
