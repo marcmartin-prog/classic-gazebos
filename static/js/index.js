@@ -1,5 +1,27 @@
 //jshint esversion: 6
 
+//webp image code
+// This is needed to use the "$" symbol and make the overall code less verbose
+const $  = document.querySelector.bind(document);
+const $$ = document.querySelectorAll.bind(document);
+
+
+// Load this script after everything else (document is ready)
+document.addEventListener("DOMContentLoaded", function(event) {
+
+	// This is the actual script
+	if (/^((?!chrome|android).)*safari/i.test(navigator.userAgent)) {
+		$$('img').forEach(ele => {
+			src = ele.src;
+			if(src.includes('webp')) {
+				src = src.replace('.webp', '.jpg');
+				ele.src = src;
+			}
+		});
+	}
+
+});
+
 //mobile menu code
 
 const mobileMenu = document.querySelector('.mobile-menu');

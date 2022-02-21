@@ -447,6 +447,7 @@ section {
   display: flex;
   flex-direction: column;
   margin-top: 2rem;
+  margin-left: -2rem;
 }
 
 .menu-items a{
@@ -455,8 +456,14 @@ section {
   text-decoration: none;
   font-family: 'RedHatDisplay', sans-serif;
   font-weight: bold;
-  color: var(--tertiary);
+  color: var(--primary);
   margin: 1rem 0;
+}
+
+.menu-item::after{
+  content: url(/images/Icons_Arrow-link.svg);
+  position: absolute;
+ margin-left: 0.75rem;
 }
 
 .mobile-menu{
@@ -979,7 +986,13 @@ section {
     margin: 0 4rem;
   }
 
+  .about-us{
+    margin: 0 4rem;
+  }
 
+  .about-us h2{
+    margin: 0 0 -2rem 2rem;
+  }
 
   .hero--icons{
     gap: 2rem;
@@ -1028,6 +1041,10 @@ section {
 }
 
 @media only screen and (min-width: 1440px){
+  header{
+    padding: 0 8rem 2rem;
+  }
+
   section{
     margin: 0 6rem
   }
@@ -1041,6 +1058,8 @@ section {
   p{
     font-size: 1.125rem;
   }
+
+
   .card{
     gap:5rem;
   }
@@ -1070,10 +1089,10 @@ section {
     right: -3rem;
   }
   .left-links{
-    left: 7rem;
+    left: 8rem;
   }
   .right-links{
-    right: 7rem;
+    right: 8rem;
   }
 
 }
