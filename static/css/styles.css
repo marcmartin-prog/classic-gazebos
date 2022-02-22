@@ -135,6 +135,10 @@ input[type=submit]{
 input:focus, textarea:focus, select:focus{
         outline: none;
 }
+input[type=text], input[type=button], select {
+-webkit-appearance: none;
+-webkit-border-radius: 0;
+}
 
 label{
   color: var(--primary);
@@ -326,6 +330,8 @@ section {
    flex-direction: column;
    padding: 1.2rem 0.94rem;
 }
+
+
 .main--link{
   font-size: 2rem;
   font-weight: bold;
@@ -423,6 +429,9 @@ section {
 
 .logo{
   margin: auto;
+}
+.mobile{
+  z-index: 20;
 }
 
 .logo img{
@@ -584,6 +593,10 @@ section {
   text-decoration: none;
   color: var(--primary);
   z-index: 12;
+}
+
+.success{
+  padding: 3rem 0.94rem;
 }
 
 .upload{
