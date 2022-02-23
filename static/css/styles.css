@@ -49,6 +49,8 @@ body {
   margin: 0;
   overflow-x: none;
   background-color: var(--secondary);
+  max-width: 135rem;
+  margin: auto;
 }
 
 form{
@@ -492,7 +494,9 @@ section {
 }
 
 .option img{
-  max-width: 100%;
+  width: 100%;
+  object-fit: cover;
+  max-height: 13.6rem;
 }
 .option h3{
   font-size: 1.68rem;
@@ -774,6 +778,17 @@ section {
     height: 3.5rem;
   }
 
+  .options{
+    padding: 1rem 2.5rem;
+  }
+  .option img{
+    max-height: 22.6rem;
+  }
+
+  .pricing{
+    padding: 2.5rem;
+  }
+
 
   .product{
     flex-basis: 0;
@@ -920,6 +935,7 @@ section {
   .menu{
     display: flex;
     flex-direction: row;
+    z-index: 20;
   }
 
   .menu ul{
@@ -959,6 +975,10 @@ section {
   }
   .option div{
     padding-top: 5rem;
+  }
+  .option img{
+    max-height: 18.6rem;
+    min-height: 18.6rem;
   }
 
   .price-parent{
@@ -1045,6 +1065,12 @@ section {
   .hp--img{
     width: 38vw;
     max-width: 38vw;
+  }
+
+  .option img{
+    max-height: 22.6rem;
+    min-height: 22.6rem;
+    min-width: 37vw;
   }
 
   .product--parent{
@@ -1140,5 +1166,17 @@ section {
   }
   .hp--text h3{
     margin-bottom: 4rem
+  }
+
+  .option img{
+    max-height: 26.6rem;
+    min-height: 26.6rem;
+    min-width: 41vw;
+  }
+}
+
+@media only screen and (min-width: 2100px){
+  .option img{
+    min-width: 34vw;
   }
 }
