@@ -422,3 +422,11 @@ const benchPrice = function(){
 
   }
 };
+
+function resetPricing(){
+  var elements = document.getElementsByTagName('select');
+  for (var i = 0; i < elements.length; i++)
+    {
+    elements[i].selectedIndex = 0;
+    }
+}

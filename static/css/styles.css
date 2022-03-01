@@ -303,6 +303,11 @@ section {
   opacity: 0.4;
 }
 
+.form--success{
+  background-color: #73FC9E;
+  padding: 1rem;
+}
+
 .gallery-section{
   padding: 4rem 0 3rem 0.94rem;
 }
@@ -486,7 +491,7 @@ section {
   left: 0;
   top: 0;
   transition: 0.3s;
-  z-index: 15;
+  z-index: 25;
 }
 
 .option{

@@ -47,30 +47,25 @@ menuCloseButton.addEventListener('click', menuClose);
 
 menuItems.addEventListener('click', menuClose);
 
-//gazebo pricing code
-/*
-let gazeboPrices;
-const tryout = document.getElementById(trial);
-
-fetch('/data/gazebos/price.json')
-  .then(response => response.json())
-  .then(function(data){
-    gazeboPrices = data;
-
+const processForm = form => {
+  const data = new FormData(form);
+  data.append('form-name', 'newsletter');
+  fetch('/', {
+    method: 'POST',
+    body: data,
   })
-  .catch(error => console.log(err));
+  .then(() => {
+    form.innerHTML = `<div class="form--success">Thanks so much for reaching out! We'll be in touch soon!</div>`;
+  })
+  .catch(error => {
+    form.innerHTML = `<div class="form--error">Error: ${error}</div>`;
+  });
+};
 
-tryout.innerText = gazeboPrices.classic.octagon.price;
-
-
-
-
-const getPrice = () => {
-  return fetch('/data/gazebos/price.json')
-  .then(res => res.json())
-  .then(prices => console.log(prices))
+const contactForm = document.querySelector('.contact-form');
+if (contactForm) {
+  contactForm.addEventListener('submit', e => {
+    e.preventDefault();
+    processForm(contactForm);
+  });
 }
-
-getPrice();
-
-*/
