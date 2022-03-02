@@ -183,12 +183,24 @@ const sealedSelect = document.getElementById("sealed");
 const screenedSelect = document.getElementById("screened");
 const benchesSelect = document.getElementById("benches");
 
+//allows for a customer to price multiple options correctly. resets pricing if a higher level parameter is changed
+function resetPricing(i){
+  var elements = document.getElementsByTagName('select');
+  for ( i = i; i < elements.length; i++)
+    {
+    elements[i].selectedIndex = 0;
+    }
 
+  priceEl.innerText = 0;
+}
 
-
-
+//resets pricing if you change a parameter
+const stylePrice = function(){
+  resetPricing(1);
+};
 // modifies the query after a user selects a shape and fills the size dropdown
 const shapePrice = function () {
+  resetPricing(2);
   let option;
   let benches;
   if(shapeSelect.value == "octagon"){
@@ -273,16 +285,16 @@ const shapePrice = function () {
   }
 };
 
-
-
 //calculates the base price from the sizePrice
 const sizePrice = function(){
+  resetPricing(3);
   let price = prices[styleSelect.value][shapeSelect.value][sizeSelect.value].price;
   priceEl.innerText = price;
 };
 
 
 const roofPrice = function(){
+  resetPricing(4);
   if( roofSelect.value == "double"){
     let price = prices[styleSelect.value][shapeSelect.value][sizeSelect.value].double;
     priceEl.innerText = price;
@@ -293,6 +305,7 @@ const roofPrice = function(){
 };
 
 const sealedPrice = function(){
+  resetPricing(5);
   if (sealedSelect.value == "Yes"){
      let price = prices[styleSelect.value][shapeSelect.value][sizeSelect.value][roofSelect.value];
      let sealingPrice = prices[styleSelect.value][shapeSelect.value][sizeSelect.value].sealed;
@@ -305,6 +318,7 @@ const sealedPrice = function(){
 };
 
 const screenPrice = function(){
+  resetPricing(6);
   if (screenedSelect.value == "Yes"){
      let price = prices[styleSelect.value][shapeSelect.value][sizeSelect.value][roofSelect.value];
      let sealingPrice = prices[styleSelect.value][shapeSelect.value][sizeSelect.value].sealed;
@@ -353,6 +367,7 @@ const benchPrice = function(){
      } else{
         let price = prices[styleSelect.value][shapeSelect.value][sizeSelect.value][roofSelect.value];
         if (sealedSelect.value == "Yes"){
+          let price = prices[styleSelect.value][shapeSelect.value][sizeSelect.value][roofSelect.value];
           let sealingPrice = prices[styleSelect.value][shapeSelect.value][sizeSelect.value].sealed;
           let benchesPrice = prices[styleSelect.value][shapeSelect.value][sizeSelect.value].benches;
           if(benchesSelect.value == "benches"){
@@ -366,6 +381,7 @@ const benchPrice = function(){
           priceEl.innerText = screenedPriceTotal;
         } else{
           if(benchesSelect.value == "benches"){
+            let price = prices[styleSelect.value][shapeSelect.value][sizeSelect.value][roofSelect.value];
             let benchesPrice = prices[styleSelect.value][shapeSelect.value][sizeSelect.value].benches;
             let screenedPriceTotal = price + benchesPrice;
             priceEl.innerText = screenedPriceTotal;
@@ -383,6 +399,10 @@ const benchPrice = function(){
       let benchesPrice = prices[styleSelect.value][shapeSelect.value][sizeSelect.value].benches;
        if (sealedSelect.value == "Yes"){
          if(benchesSelect.value >= 1){
+           let price = prices[styleSelect.value][shapeSelect.value][sizeSelect.value][roofSelect.value];
+           let sealingPrice = prices[styleSelect.value][shapeSelect.value][sizeSelect.value].sealed;
+           let screeningPrice = prices[styleSelect.value][shapeSelect.value][sizeSelect.value].screened;
+           let benchesPrice = prices[styleSelect.value][shapeSelect.value][sizeSelect.value].benches;
            let screenedPriceTotal = price + sealingPrice + screeningPrice + (benchesPrice * benchesSelect.value);
            priceEl.innerText = screenedPriceTotal;
          }else{
@@ -397,11 +417,17 @@ const benchPrice = function(){
      } else{
         let price = prices[styleSelect.value][shapeSelect.value][sizeSelect.value][roofSelect.value];
         if (sealedSelect.value == "Yes"){
+          let price = prices[styleSelect.value][shapeSelect.value][sizeSelect.value][roofSelect.value];
           let sealingPrice = prices[styleSelect.value][shapeSelect.value][sizeSelect.value].sealed;
           let benchesPrice = prices[styleSelect.value][shapeSelect.value][sizeSelect.value].benches;
           if(benchesSelect.value >= 1){
+            let price = prices[styleSelect.value][shapeSelect.value][sizeSelect.value][roofSelect.value];
+            let sealingPrice = prices[styleSelect.value][shapeSelect.value][sizeSelect.value].sealed;
+            let screeningPrice = prices[styleSelect.value][shapeSelect.value][sizeSelect.value].screened;
+            let benchesPrice = prices[styleSelect.value][shapeSelect.value][sizeSelect.value].benches;
             let screenedPriceTotal = price + sealingPrice + (benchesPrice * benchesSelect.value);
-            priceEl.innerText = screenedPriceTotal;
+            console.log(screenedPriceTotal);
+            priceEl.innerHTML = screenedPriceTotal;
           }else{
             let screenedPriceTotal = price + sealingPrice;
             priceEl.innerText = screenedPriceTotal;
@@ -422,11 +448,3 @@ const benchPrice = function(){
 
   }
 };
-
-function resetPricing(){
-  var elements = document.getElementsByTagName('select');
-  for (var i = 0; i < elements.length; i++)
-    {
-    elements[i].selectedIndex = 0;
-    }
-}
