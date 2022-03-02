@@ -194,6 +194,7 @@ function resetPricing(i){
   priceEl.innerText = 0;
 }
 
+
 //resets pricing if you change a parameter
 const stylePrice = function(){
   resetPricing(1);
@@ -427,7 +428,9 @@ const benchPrice = function(){
             let benchesPrice = prices[styleSelect.value][shapeSelect.value][sizeSelect.value].benches;
             let screenedPriceTotal = price + sealingPrice + (benchesPrice * benchesSelect.value);
             console.log(screenedPriceTotal);
-            priceEl.innerHTML = screenedPriceTotal;
+            priceEl.innerText = screenedPriceTotal;
+            console.log(priceEl.innerText);
+            console.log("done");
           }else{
             let screenedPriceTotal = price + sealingPrice;
             priceEl.innerText = screenedPriceTotal;
