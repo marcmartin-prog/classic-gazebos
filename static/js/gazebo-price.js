@@ -435,8 +435,8 @@ const benchPrice = function(){
             let screenedPriceTotal = price + sealingPrice;
             priceEl.innerText = screenedPriceTotal;
           }
-          let screenedPriceTotal = price + sealingPrice;
-          priceEl.innerText = screenedPriceTotal;
+        //  let screenedPriceTotal = price + sealingPrice;
+        //  priceEl.innerText = screenedPriceTotal;
         } else{
           if(benchesSelect.value >= 1){
             let benchesPrice = prices[styleSelect.value][shapeSelect.value][sizeSelect.value].benches;
