@@ -49,6 +49,7 @@ menuCloseButton.addEventListener('click', menuClose);
 
 menuItems.addEventListener('click', menuClose);
 
+/*
 const processForm = form => {
   const data = new FormData(form);
   data.append('form-name', 'newsletter');
@@ -62,8 +63,7 @@ const processForm = form => {
   .catch(error => {
     form.innerHTML = `<div class="form--error">Error: ${error}</div>`;
   });
-};
-
+};*/
 const contactForm = document.querySelector('.contact-form');
 if (contactForm) {
   contactForm.addEventListener('submit', e => {
