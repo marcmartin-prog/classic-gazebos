@@ -63,7 +63,7 @@ const processForm = form => {
   .catch(error => {
     form.innerHTML = `<div class="form--error">Error: ${error}</div>`;
   });
-};*/
+};
 const contactForm = document.querySelector('.contact-form');
 if (contactForm) {
   contactForm.addEventListener('submit', e => {
@@ -71,3 +71,4 @@ if (contactForm) {
     processForm(contactForm);
   });
 }
+*/
