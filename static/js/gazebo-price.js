@@ -289,7 +289,7 @@ const shapePrice = function () {
 //calculates the base price from the sizePrice
 const sizePrice = function(){
   resetPricing(3);
-  let price = prices[styleSelect.value][shapeSelect.value][sizeSelect.value].price;
+  let price = prices[styleSelect.value][shapeSelect.value][sizeSelect.value].single;
   priceEl.innerText = price;
 };
 
@@ -300,7 +300,7 @@ const roofPrice = function(){
     let price = prices[styleSelect.value][shapeSelect.value][sizeSelect.value].double;
     priceEl.innerText = price;
   } else{
-    let price = prices[styleSelect.value][shapeSelect.value][sizeSelect.value].price;
+    let price = prices[styleSelect.value][shapeSelect.value][sizeSelect.value].single;
     priceEl.innerText = price;
   }
 };
