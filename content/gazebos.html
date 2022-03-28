@@ -120,46 +120,55 @@ description: "Classic Gazebos builds quality wooden gazebos for Arkansas, Texas,
 <section id="pricing" class="pricing">
    <h2>Pricing <br><span class="light-text">Choose your options to calculate the price</span></h2>
    <div class="pricing-selector">
-     <div class="">
-       <p id="trial"></p>
-       <select class="" name="style" id='style' onChange = "stylePrice(this.value)">
-         <option value="Select Type" selected disabled hidden>Select Economy or Classic</option>
-         <option value="economy">Economy</option>
-         <option value="classic">Classic</option>
-       </select>
-       <select class="" name="shape" id ='shape' onChange="shapePrice(this.value)">
-         <option value="Choose Shape" selected disabled hidden>Choose Shape</option>
-         <option value="octagon">Octagon</option>
-         <option value="oval">Oval</option>
-       </select>
-       <select class="" name="size" id = "size" onchange="sizePrice(this.value)">
-         <option value="Choose Size" selected hidden>Choose Size</option>
+     <form class="" action="/thanks" method="post" netlify>
+       <div class="">
+         <p id="trial"></p>
+         <select class="" name="style" id='style' onChange = "stylePrice(this.value)">
+           <option value="Select Type" selected disabled hidden>Select Economy or Classic</option>
+           <option value="economy">Economy</option>
+           <option value="classic">Classic</option>
+         </select>
+         <select class="" name="shape" id ='shape' onChange="shapePrice(this.value)">
+           <option value="Choose Shape" selected disabled hidden>Choose Shape</option>
+           <option value="octagon">Octagon</option>
+           <option value="oval">Oval</option>
+         </select>
+         <select class="" name="size" id = "size" onchange="sizePrice(this.value)">
+           <option value="Choose Size" selected hidden>Choose Size</option>
 
-       </select>
-       <select class="" name="roof" id="roof" onchange="roofPrice(this.value)">
-         <option value="Choose Roof" selected disabled hidden >Choose Roof</option>
-         <option value="price">Single Roof</option>
-         <option value="double">Double Roof</option>
-       </select>
-       <select class="" name="sealed" id="sealed" onchange="sealedPrice(this.value)">
-         <option value="sealed" selected disabled hidden>Sealing</option>
-         <option value="Yes">Sealed</option>
-         <option value="No">Not Sealed</option>
-       </select>
-       <select class="" name="screen" id="screened" onchange="screenPrice(this.value)">
-         <option value="screen" selected disabled hidden>Screening</option>
-         <option value="Yes">Screened</option>
-         <option value="No">Not Screened</option>
-       </select>
-       <select class="" name="benches" id="benches" onchange="benchPrice(this.value)">
-         <option value="Add Benches" selected  hidden>Benches</option>
-       </select>
-     </div>
-     <div class="price-parent">
-       <p class="price"><span class="light-text">Your price is:</span><br>$<span id="price-number">0</span></p>
-       <p>Price does not include shipping or taxes. <br>Onsite Construction is available for an additional cost.</p>
-       <a href="/contact-us" class="aqua--link">Get In Touch and Order</a>
-     </div>
+         </select>
+         <select class="" name="roof" id="roof" onchange="roofPrice(this.value)">
+           <option value="Choose Roof" selected disabled hidden >Choose Roof</option>
+           <option value="price">Single Roof</option>
+           <option value="double">Double Roof</option>
+         </select>
+         <select class="" name="sealed" id="sealed" onchange="sealedPrice(this.value)">
+           <option value="sealed" selected disabled hidden>Sealing</option>
+           <option value="Yes">Sealed</option>
+           <option value="No">Not Sealed</option>
+         </select>
+         <select class="" name="screen" id="screened" onchange="screenPrice(this.value)">
+           <option value="screen" selected disabled hidden>Screening</option>
+           <option value="Yes">Screened</option>
+           <option value="No">Not Screened</option>
+         </select>
+         <select class="" name="benches" id="benches" onchange="benchPrice(this.value)">
+           <option value="Add Benches" selected  hidden>Benches</option>
+         </select>
+       </div>
+       <div class="price-parent">
+         <p class="price"><span class="light-text">Your price is:</span><br>$<span id="price-number">0</span></p>
+         <p>Price does not include shipping or taxes. <br>Onsite Construction is available for an additional cost.</p>
+         <label for="name">Name</label>
+         <input type="text" name="name" value="">
+         <label for="phone">Phone</label>
+         <input type="number" name="phone" value="">
+         <label for="email">Email</label>
+         <input type="email" name="email" value="">
+         <button type="submit" name="submit" class="aqua--link">Submit Order Request</button>
+       </div>
+
+     </form>
    </div>
 </section>
 
