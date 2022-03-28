@@ -139,7 +139,7 @@ description: "Classic Gazebos builds quality wooden gazebos for Arkansas, Texas,
          </select>
          <select class="" name="roof" id="roof" onchange="roofPrice(this.value)">
            <option value="Choose Roof" selected disabled hidden >Choose Roof</option>
-           <option value="price">Single Roof</option>
+           <option value="single">Single Roof</option>
            <option value="double">Double Roof</option>
          </select>
          <select class="" name="sealed" id="sealed" onchange="sealedPrice(this.value)">
@@ -160,11 +160,11 @@ description: "Classic Gazebos builds quality wooden gazebos for Arkansas, Texas,
          <p class="price"><span class="light-text">Your price is:</span><br>$<span id="price-number">0</span></p>
          <p>Price does not include shipping or taxes. <br>Onsite Construction is available for an additional cost.</p>
          <label for="name">Name</label>
-         <input type="text" name="name" value="">
+         <input type="text" name="name" value="" required>
          <label for="phone">Phone</label>
-         <input type="number" name="phone" value="">
+         <input type="number" name="phone" value="" required>
          <label for="email">Email</label>
-         <input type="email" name="email" value="">
+         <input type="email" name="email" value="" required>
          <button type="submit" name="submit" class="aqua--link">Submit Order Request</button>
        </div>
 

@@ -5,28 +5,28 @@ let prices = {
     "classic": {
         "octagon": {
               "8x8":{
-                "price":2690,
+                "single":2690,
                 "double": 3177,
                 "sealed": 294,
                 "screened": 884,
                 "benches": 123
               },
               "10x10":{
-                "price":3235,
+                "single":3235,
                 "double": 3754,
                 "sealed": 324,
                 "screened": 974,
                 "benches":145
               },
               "12x12":{
-                "price":3884,
+                "single":3884,
                 "double": 4532,
                 "sealed": 359,
                 "screened": 1078,
                 "benches": 179
               },
               "14x14":{
-                "price":4792,
+                "single":4792,
                 "double": 5608,
                 "sealed": 448,
                 "screened": 1273,
@@ -37,49 +37,49 @@ let prices = {
 
             "oval": {
                   "8x12":{
-                    "price":3469,
+                    "single":3469,
                     "double": 3699,
                     "sealed": 324,
                     "screened": 974,
                     "benches": 22.5
                   },
                   "10x12":{
-                    "price":4142,
+                    "single":4142,
                     "double": 4791,
                     "sealed": 359,
                     "screened": 1149,
                     "benches":34
                   },
                   "10x16":{
-                    "price":4922,
+                    "single":4922,
                     "double": 5608,
                     "sealed": 448,
                     "screened": 1273,
                     "benches": 34
                   },
                   "10x20":{
-                    "price":5479,
+                    "single":5479,
                     "double": 6257,
                     "sealed": 532,
                     "screened": 1461,
                     "benches": 34
                   },
                   "12x16":{
-                    "price":5511,
+                    "single":5511,
                     "double": 6348,
                     "sealed": 532,
                     "screened": 1461,
                     "benches":40
                   },
                   "12x18":{
-                    "price":5933,
+                    "single":5933,
                     "double": 6905,
                     "sealed": 560,
                     "screened": 1573,
                     "benches": 40
                   },
                   "12x20":{
-                    "price":6478,
+                    "single":6478,
                     "double": 7456,
                     "sealed": 583,
                     "screened": 1680,
@@ -90,28 +90,28 @@ let prices = {
     "economy": {
                     "octagon": {
                           "8x8":{
-                            "price":2042,
+                            "single":2042,
                             "double": 2399,
                             "sealed": 294,
                             "screened": 884,
                             "benches": 112
                           },
                           "10x10":{
-                            "price":2458,
+                            "single":2458,
                             "double": 2847,
                             "sealed": 324,
                             "screened": 974,
                             "benches":136
                           },
                           "12x12":{
-                            "price":2951,
+                            "single":2951,
                             "double": 3436,
                             "sealed": 359,
                             "screened": 1078,
                             "benches": 171
                           },
                           "14x14":{
-                            "price":3884,
+                            "single":3884,
                             "double": 4506,
                             "sealed": 448,
                             "screened": 1273,
@@ -122,49 +122,49 @@ let prices = {
 
                         "oval": {
                               "8x12":{
-                                "price":2587,
+                                "single":2587,
                                 "double": 3144,
                                 "sealed": 324,
                                 "screened": 972,
                                 "benches": 22.5
                               },
                               "10x12":{
-                                "price":3365,
+                                "single":3365,
                                 "double": 3884,
                                 "sealed": 359,
                                 "screened": 1149,
                                 "benches":30
                               },
                               "10x16":{
-                                "price":3567,
+                                "single":3567,
                                 "double": 4157,
                                 "sealed": 442,
                                 "screened": 1273,
                                 "benches": 30
                               },
                               "10x20":{
-                                "price":4402,
+                                "single":4402,
                                 "double": 5025,
                                 "sealed": 53,
                                 "screened": 1461,
                                 "benches": 30
                               },
                               "12x16":{
-                                "price":4442,
+                                "single":4442,
                                 "double": 4992,
                                 "sealed": 530,
                                 "screened": 1461,
                                 "benches": 35
                               },
                               "12x18":{
-                                "price":4766,
+                                "single":4766,
                                 "double": 5608,
                                 "sealed": 560,
                                 "screened": 1573,
                                 "benches": 35
                               },
                               "12x20":{
-                                "price":5252,
+                                "single":5252,
                                 "double": 6031,
                                 "sealed": 583,
                                 "screened": 1680,
