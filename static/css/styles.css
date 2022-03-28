@@ -41,7 +41,7 @@
     font-style: normal;
 }
 
-a{
+a, label{
   font-family: 'RedHatDisplay', sans-serif;
 }
 
@@ -116,7 +116,7 @@ input[type=file]{
   display: none;
 }
 
-input[type=email], input[type=text], input[type=phone], textarea{
+input[type=email], input[type=text], input[type=phone], input[type=number], textarea{
   background-color: rgba(39, 48, 67, 0);
   color: var(--primary);
   margin-bottom: 2rem;
@@ -175,6 +175,10 @@ section {
   color: var(--tertiary);
   margin: 0.8rem 0;
   display: block;
+  background-color: unset;
+  border: none;
+  border-bottom: 1px solid var(--tertiary);
+  cursor: pointer;
 }
 .aqua--link::after{
   content: url(/images/aqua-arrow.svg);
@@ -545,6 +549,11 @@ section {
   letter-spacing: -0.27px;
 }
 
+.price-parent input{
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  color: white;
+}
+
 .pricing{
   background-color: var(--primary);
   padding: 2.5rem 0.94rem;
@@ -851,9 +860,7 @@ section {
     margin: 0 2rem;
   }
 
-  .aqua--link{
-    font-size: 2.2rem;
-  }
+
 
   .card--gaz{
     flex: 1;
@@ -987,15 +994,16 @@ section {
   }
 
   .price-parent{
-    padding: 5rem 3rem;
+    padding: 0 3rem;
   }
 
   .pricing{
     padding: 2.5rem 3.5rem;
   }
-  .pricing-selector{
+  .pricing-selector form{
     display: flex;
     gap: 2rem;
+    flex-direction: row;
   }
   .pricing-selector div{
     flex: 1;
@@ -1030,6 +1038,9 @@ section {
 
   .about-us h2{
     margin: 0 0 -2rem 2rem;
+  }
+  .aqua--link{
+    font-size: 2.2rem;
   }
 
   .hero--icons{
