@@ -130,6 +130,7 @@ let prices = {
 
 const furniturePriceDropdown = document.getElementById('furniture-price');
 const priceEl = document.getElementById('price-number');
+const furnitureName = document.getElementById('furniture-name');
 
 let defaultOption = document.createElement('option');
 defaultOption.text = 'Choose Furniture';
@@ -150,5 +151,6 @@ function populateDropdown(){
 populateDropdown();
 
 const furniturePrice = function(){
-  priceEl.innerText = prices.furniture[furniturePriceDropdown.value].price
+  priceEl.innerText = prices.furniture[furniturePriceDropdown.value].price;
+  furnitureName.value = prices.furniture[furniturePriceDropdown.value].name;
 };
