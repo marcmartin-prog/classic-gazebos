@@ -39,16 +39,8 @@
   },
   "url" : "https://www.classicgazebos.net/"
 }
-</script>
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-S9DR21XM9F"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+<script defer data-domain="classicgazebos.net" src="https://plausible.io/js/plausible.js"></script>
 
-  gtag('config', 'G-S9DR21XM9F');
-</script>
   {{ template "_internal/opengraph.html" . }}
   {{ template "_internal/twitter_cards.html" . }}
   {{ if not (in (string .Site.BaseURL) "localhost") }}
