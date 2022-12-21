@@ -42,7 +42,7 @@
 </script>
 
 <script defer data-domain="classicgazebos.net" src="https://plausible.io/js/plausible.js"></script>
-
+<script>window.plausible = window.plausible || function() { (window.plausible.q = window.plausible.q || []).push(arguments) }</script>
   {{ template "_internal/opengraph.html" . }}
   {{ template "_internal/twitter_cards.html" . }}
   {{ if not (in (string .Site.BaseURL) "localhost") }}
