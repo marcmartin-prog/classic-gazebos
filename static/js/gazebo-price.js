@@ -9,28 +9,32 @@ let prices = {
                 "double": 3177,
                 "sealed": 294,
                 "screened": 884,
-                "benches": 123
+                "benches": 123,
+                "spiral": 500
               },
               "10x10":{
                 "single":3235,
                 "double": 3754,
                 "sealed": 324,
                 "screened": 974,
-                "benches":145
+                "benches":145,
+                "spiral": 550
               },
               "12x12":{
                 "single":3884,
                 "double": 4532,
                 "sealed": 359,
                 "screened": 1078,
-                "benches": 179
+                "benches": 179,
+                "spiral": 700
               },
               "14x14":{
                 "single":4792,
                 "double": 5608,
                 "sealed": 448,
                 "screened": 1273,
-                "benches": 212
+                "benches": 212,
+                "spiral": 900
               }
 
             },
@@ -41,49 +45,56 @@ let prices = {
                     "double": 3699,
                     "sealed": 324,
                     "screened": 974,
-                    "benches": 22.5
+                    "benches": 22.5,
+                    "spiral": 675
                   },
                   "10x12":{
                     "single":4142,
                     "double": 4791,
                     "sealed": 359,
                     "screened": 1149,
-                    "benches":34
+                    "benches":34,
+                    "spiral": 750
                   },
                   "10x16":{
                     "single":4922,
                     "double": 5608,
                     "sealed": 448,
                     "screened": 1273,
-                    "benches": 34
+                    "benches": 34,
+                    "spiral": 800
                   },
                   "10x20":{
                     "single":5479,
                     "double": 6257,
                     "sealed": 532,
                     "screened": 1461,
-                    "benches": 34
+                    "benches": 34,
+                    "spiral": 925
                   },
                   "12x16":{
                     "single":5511,
                     "double": 6348,
                     "sealed": 532,
                     "screened": 1461,
-                    "benches":40
+                    "benches":40,
+                    "spiral": 1000
                   },
                   "12x18":{
                     "single":5933,
                     "double": 6905,
                     "sealed": 560,
                     "screened": 1573,
-                    "benches": 40
+                    "benches": 40,
+                    "spiral": 1100
                   },
                   "12x20":{
                     "single":6478,
                     "double": 7456,
                     "sealed": 583,
                     "screened": 1680,
-                    "benches": 40
+                    "benches": 40,
+                    "spiral": 1300
                   }
                 }
               },
