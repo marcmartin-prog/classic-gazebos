@@ -193,9 +193,12 @@ const roofSelect = document.getElementById("roof");
 const sealedSelect = document.getElementById("sealed");
 const screenedSelect = document.getElementById("screened");
 const benchesSelect = document.getElementById("benches");
+const floorSelect = document.getElementById('floor');
+
 
 //allows for a customer to price multiple options correctly. resets pricing if a higher level parameter is changed
 function resetPricing(i){
+  sessionStorage.setItem("pricedFloor", false);
   var elements = document.getElementsByTagName('select');
   for ( i = i; i < elements.length; i++)
     {
@@ -357,6 +360,7 @@ const screenPrice = function(){
 };
 
 const benchPrice = function(){
+  resetPricing(7);
   if(shapeSelect.value == "octagon"){
     if (screenedSelect.value == "Yes"){
       let price = prices[styleSelect.value][shapeSelect.value][sizeSelect.value][roofSelect.value];
@@ -462,3 +466,31 @@ const benchPrice = function(){
 
   }
 };
+
+const floorPrice = function(){
+  let pricedFloor = sessionStorage.getItem("pricedFloor")
+  const floor = {
+    "8x8": 500,
+    "10x10": 550,
+    "12x12": 700,
+    "14x14": 900,
+    "8x12": 675,
+    "10x12": 750,
+    "10x16": 800,
+    "10x20": 925,
+    "12x16": 1000,
+    "12x18": 1100,
+    "12x20": 1300
+  }
+  let currentPrice = Number(priceEl.innerHTML);
+  spiralPrice = floor[sizeSelect.value];
+  if(floorSelect.value === "Spiral"){ 
+    let totalPrice = currentPrice + spiralPrice;
+    priceEl.innerText = totalPrice;
+    sessionStorage.setItem("pricedFloor", true)
+  }else if(pricedFloor){
+    let totalPrice = currentPrice - spiralPrice
+    priceEl.innerText = totalPrice;
+    sessionStorage.setItem("pricedFloor", false)
+  }
+}
