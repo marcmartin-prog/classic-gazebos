@@ -214,6 +214,11 @@ section {
   margin-top: 0.5rem;
 }
 
+.colors img{
+  max-width: 100%;
+  object-fit: cover;
+}
+
 .contact{
   display: flex;
   flex-direction: column;
@@ -331,10 +336,12 @@ section {
   width: 100%;
   margin-top: 2px;
 }
-.hero-gazebo--img{
+.hero-gazebo--img, .gazebo-hero--img-parent img{
   width: 100%;
   margin-top: 2px;
 }
+
+
 
 .hero--links{
    display: flex;
@@ -519,6 +526,10 @@ section {
   margin-top: 1rem;
 }
 
+.option .img-fluid{
+  object-fit: contain;
+}
+
 .options{
   padding: 1rem 0.94rem;
 }
@@ -539,6 +550,11 @@ section {
   color: var(--primary);
   display: block;
   margin-top: 1rem;
+}
+
+.poly-hero img{
+  max-height: 18rem;
+  object-fit: cover;
 }
 
 .price{
@@ -723,7 +739,7 @@ section {
     margin-top: 0;
   }
 
-  .hero-gazebo--img{
+  .hero-gazebo--img, .gazebo-hero--img-parent img{
     margin-top: 0;
     margin-left: 2px;
     height: 100%;
@@ -860,7 +876,9 @@ section {
     margin: 0 2rem;
   }
 
-
+  .colors>div{
+    width: 33%;
+  }
 
   .card--gaz{
     flex: 1;
@@ -928,7 +946,7 @@ section {
   }
 
   .logo img{
-    margin: 0 2rem;
+    margin: 0 0.5rem;
     height: 4rem;
   }
 
@@ -948,6 +966,10 @@ section {
     display: flex;
     flex-direction: row;
     z-index: 20;
+    
+  }
+  .menu div{
+    flex-basis: 33%;
   }
 
   .menu ul{
@@ -958,7 +980,7 @@ section {
   .menu a{
     text-decoration: none;
     color: var(--primary);
-    margin: 0 1.5rem;
+    margin: 0 0.5rem;
     font-family: 'plus-Jakarta-Sans', sans-serif;
     font-size: 1rem;
     font-weight: bold;
@@ -993,6 +1015,15 @@ section {
     min-height: 18.6rem;
   }
 
+  .poly{
+    max-width: 50%;
+    padding-right: 1rem;
+  }
+  .poly-hero img{
+    max-height: unset;
+
+  }
+
   .price-parent{
     padding: 0 3rem;
   }
@@ -1009,12 +1040,13 @@ section {
     flex: 1;
   }
 
+
   .quality{
     padding: 4rem 3rem 0;
   }
 
   .quality h2{
-    margin: 3rem 0.94rem 6rem;
+    margin: 3rem 0.94rem 3rem;
   }
   .quality h3{
     margin-block-end: 0;
