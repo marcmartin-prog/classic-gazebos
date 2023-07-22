@@ -108,7 +108,7 @@ input, textarea{
   font-family: 'plus-Jakarta-Sans', sans-serif;
   font-weight: bold;
   border: none;
-  border-bottom: 1px solid rgb(39, 48, 67, 0.2);
+  border-bottom: 1px solid #fff;
   padding: 0 20px 10px 0;
 }
 input[type=file]{
@@ -118,7 +118,7 @@ input[type=file]{
 
 input[type=email], input[type=text], input[type=phone], input[type=number], textarea{
   background-color: rgba(39, 48, 67, 0);
-  color: var(--primary);
+  color: var(--secondary);
   margin-bottom: 2rem;
 }
 
@@ -555,6 +555,10 @@ section {
 .poly-hero img{
   max-height: 18rem;
   object-fit: cover;
+}
+
+.poly-prices>div>p{
+  opacity: 1;
 }
 
 .price{
@@ -1021,9 +1025,12 @@ section {
   }
   .poly-hero img{
     max-height: unset;
-
   }
 
+  .poly-prices{
+    display: flex;
+  }
+  
   .price-parent{
     padding: 0 3rem;
   }

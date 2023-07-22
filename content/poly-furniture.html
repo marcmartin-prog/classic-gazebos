@@ -145,19 +145,35 @@ description: "Durable poly lawn and patio furniture that will transform your out
 </section>
 
 
-<!--Pricing Section
+<!--Pricing Section-->
 <section id="pricing" class="pricing">
    <h2>Pricing <br><span class="light-text">Choose your furniture to get pricing</span></h2>
    <div class="pricing-selector">
-     <form class="" name="Furniture-pricing" action="/thanks" method="post" netlify>
+     <form class="" name="Poly-Furniture-pricing" action="/thanks" method="post" netlify>
        <div class="">
-         <select class="" id="furniture-price" name="style" onchange="furniturePrice(this.value)">
+         <select class="" id="poly-price" name="style" onchange="polyPrice(this.value)">
 
          </select>
          <input type="text" name="furniture-name" id="furniture-name" value="" hidden>
-       </div>
+          <select style="display: none"  id="poly-option" name="style" onchange="polyPriceOpt(this.value)">
+            <option value="Not Selected"selected hidden disabled>Please Select Options</option>
+          </select>
+          <input type="text" name="furniture-options" id="furniture-options" value="" hidden>
+        </div>
+       
        <div class="">
-         <p class="price"><span class="light-text">Your price is:</span><br>$<span id="price-number">0</span></p>
+         <p class="price"><span class="light-text">Your price is:</p>
+         <div class="poly-prices">
+          <div>
+            <p><span>Standard</span><br>$<span id="price-number-standard">0</span></p>
+          </div>
+          <div>
+            <p><span>Premium</span><br>$<span id="price-number-premium">0</span></p>
+          </div>
+          <div>
+            <p><span>Woodgrain</span><br>$<span id="price-number-woodgrain">0</span></p>
+          </div>
+         </div>
          <p>Price does not include shipping or taxes.</p>
          <label for="name">Name</label>
          <input type="text" name="name" value="" required>
@@ -169,12 +185,8 @@ description: "Durable poly lawn and patio furniture that will transform your out
        </div>
      </form>
    </div>
-</section>-->
-<section id="pricing" class="pricing">
-  <h2>Pricing <br><span class="light-text">Choose your furniture to get pricing</span></h2>
- <p>Please call <a href="tel:8706471265">870-647-1265</a> for a quote or to place an order. Online pricing coming soon.</p>
 </section>
-<script type="text/javascript" src="/js/furniture-price.js">
+
 
 </script>
 <style media="screen">
