@@ -46,6 +46,21 @@ const prices = {
             "woodgrain":254
         }
 
+    },
+    "dining-stool":{
+        "standard":95,
+        "premium":102,
+        "woodgrain":114
+    },
+    "pub-stool":{
+        "standard":114,
+        "premium":123,
+        "woodgrain":136
+    },
+    "bar-stool":{
+        "standard":119,
+        "premium":128,
+        "woodgrain":142
     }
 }
 
