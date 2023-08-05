@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>http://localhost:1313/poly-furniture/</loc>
+    <lastmod>2023-06-21T12:53:36-05:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/thanks/</loc>
+    <lastmod>2022-02-16T07:11:09-06:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/contact-us/</loc>
+    <lastmod>2022-02-15T05:57:52-06:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/lawn-furniture/</loc>
+    <lastmod>2022-02-07T13:02:18-06:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/gazebos/</loc>
+    <lastmod>2022-02-07T13:02:05-06:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/</loc>
+    <lastmod>2021-05-05T06:21:35-05:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/categories/</loc>
+  </url><url>
+    <loc>http://localhost:1313/tags/</loc>
+  </url>
+</urlset>
